@@ -131,7 +131,7 @@ public class Pessoa {
 		return endereco;
 	}
 
-	public void setEnedereco(String endereco) {
+	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 
