@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+
 public class PropostaTeste {
 	final static Logger logger = Logger.getLogger(PropostaTeste.class);
 	Proposta p;
