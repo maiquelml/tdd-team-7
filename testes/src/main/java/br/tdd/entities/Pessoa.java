@@ -13,13 +13,13 @@ public class Pessoa {
 	private String telefone;
 	private String celular;
 	private String email;
-	private String enedereco;
+	private String endereco;
 	private int numeroCasa;
 	private String cep;
 	private String estado;
 
 	public Pessoa(String nome, String sexo, String cpf, long cnh, String dataNascimento, long rg, String orgaoEmissor,
-			String dataEmissao, String telefone, String celular, String email, String enedereco, int numeroCasa,
+			String dataEmissao, String telefone, String celular, String email, String endereco, int numeroCasa,
 			String cep, String estado, String convenio, int matriculaConvenio, float valorDesejado) {
 
 		this.nome = nome;
@@ -33,7 +33,7 @@ public class Pessoa {
 		this.telefone = telefone;
 		this.celular = celular;
 		this.email = email;
-		this.enedereco = enedereco;
+		this.endereco = endereco;
 		this.numeroCasa = numeroCasa;
 		this.cep = cep;
 		this.estado = estado;
@@ -127,12 +127,12 @@ public class Pessoa {
 		this.email = email;
 	}
 
-	public String getEnedereco() {
-		return enedereco;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setEnedereco(String enedereco) {
-		this.enedereco = enedereco;
+	public void setEnedereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public int getNumeroCasa() {
