@@ -19,21 +19,43 @@ public class Proposta extends Pessoa {
 		if (this.getNome() == null) {
 			setStatus(11);
 			mensagem = "Favor informar o nome";
+			System.out.println(mensagem);
 		} else if (this.getSexo() != "Masculino" && this.getSexo() != "Feminino") {
 			setStatus(11);
 			mensagem = "Favor informar o sexo";
+			System.out.println(mensagem);
 		} else if (this.getCpf() == null) {
 			setStatus(11);
 			mensagem = "Favor informar o CPF";
+			System.out.println(mensagem);
 		} else if (this.getDataNascimento() == null) {
 			setStatus(11);
 			mensagem = "Favor informar a Data de Nascimento";
+			System.out.println(mensagem);
 		} else {			
 			System.out.println(this.getNome());
 			setStatus(10);
 			mensagem = "Proposta Incluída com Sucesso";
+			System.out.println(mensagem);
 		}
 		
+	}
+	
+	public void AlterarProposta() {
+		if (getStatus() == 20) {
+			this.setRg(1234567890);
+			this.setCep("93265-000");
+			this.setEnedereco("Avenida Teste");
+			this.setNumeroCasa(1234);
+			this.setEstado("RS");
+			setStatus(30);
+			mensagem = "Proposta Alterada com Sucesso";
+			System.out.println(mensagem);
+			System.out.println("Novo status: " + getStatus());
+		} else {
+			mensagem = "Proposta não disponível para alteração";
+			System.out.println(mensagem);
+		}
 	}
 
 	public int getStatus() {
