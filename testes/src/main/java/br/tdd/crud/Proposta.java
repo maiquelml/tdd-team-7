@@ -21,7 +21,6 @@ public class Proposta extends Pessoa {
 	private String mensagem;
 
 	public void IncluirProposta() {
-
 		if (this.getNome() == null) {
 			setStatus(11);
 			mensagem = "Favor informar o nome";
@@ -37,6 +36,7 @@ public class Proposta extends Pessoa {
 		} else if (this.getDataNascimento() == null) {
 			setStatus(11);
 			mensagem = "Favor informar a Data de Nascimento";
+			System.out.println(mensagem);
 			System.out.println(mensagem);
 		} else {
 			System.out.println(this.getNome());

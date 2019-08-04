@@ -57,6 +57,13 @@ public class PropostaTeste {
 		assertEquals("Favor informar o CPF", p.getMensagem());
 		assertTrue(p.getStatus() == 11);
 	}
+	
+	@Test
+	public void deveAlterarPropostacomSucessoeAlterarStatuspara30() throws Exception {
+		p.setStatus(20);
+		p.AlterarProposta();
+		assertTrue(p.getStatus() == 30);
+	}
 
 	@Test
 	public void deveAlterarPropostacomSucessoeAlterarStatuspara30() throws Exception {
