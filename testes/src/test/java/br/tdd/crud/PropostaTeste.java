@@ -10,6 +10,9 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.tdd.entities.Pessoa;
+import br.tdd.filter.Filtro;
+
 
 public class PropostaTeste {
 	final static Logger logger = Logger.getLogger(PropostaTeste.class);
@@ -86,4 +89,19 @@ public class PropostaTeste {
 		}
 	}
 
+	@Test
+	public void deveFiltrarListaDePropostas() {
+		
+		Filtro filtros = new Filtro("222.222.222-22");
+		
+		Pessoa[] l = {
+				new Pessoa("Cliente A", null, "111.111.111-11", 0, null, 0, null, null, null, null, null, null, 0, null, null, null, 0, 0),
+				new Pessoa("Cliente B", null, "222.222.222-22", 0, null, 0, null, null, null, null, null, null, 0, null, null, null, 0, 0),
+				new Pessoa("Cliente C", null, "333.333.333-33", 0, null, 0, null, null, null, null, null, null, 0, null, null, null, 0, 0)
+		};
+		
+		
+		assertEquals(filtros.getCpf(), filtros.filtrarClientes(l)[0].getCpf());
+		assertEquals("Cliente B", filtros.filtrarClientes(l)[0].getNome());
+	}
 }
