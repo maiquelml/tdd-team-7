@@ -30,11 +30,11 @@ public class ControleDeAcesso {
 
 		for (String a : admins) {
 			if (a.equals(matricula)) {
-				logger.info("Acesso com a matrícula " +matricula+ " realizada com sucesso.");
+				System.out.println("Acesso com a matrícula " +matricula+ " realizada com sucesso.");
 				return true;
 			}
 		}
-		logger.info("Acesso com a matrícula " +matricula+ " inválida.");
+		System.out.println("Acesso com a matrícula " +matricula+ " inválida.");
 		return false;
 	}
 }

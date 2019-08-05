@@ -37,7 +37,7 @@ public class Proposta extends Pessoa {
 			System.out.println(this.getNome());
 			setStatus(10);
 			
-			logger.info("Proposta Incluída com Sucesso");			
+			System.out.println("Proposta Incluída com Sucesso");			
 		}
 		
 	}
@@ -50,10 +50,10 @@ public class Proposta extends Pessoa {
 			this.setNumeroCasa(1234);
 			this.setEstado("RS");
 			setStatus(30);
-			logger.info("Proposta Alterada com Sucesso. Novo status " + getStatus());	
+			System.out.println("Proposta Alterada com Sucesso. Novo status " + getStatus());	
 			
 		} else {
-			logger.info("Proposta não disponível para alteração");	
+			System.out.println("Proposta não disponível para alteração");	
 			
 		}
 	}
@@ -73,7 +73,7 @@ public class Proposta extends Pessoa {
 		System.out.println(propostas);
 
 		if (propostas.removeIf(name -> name.equals(nomeCliente))) {
-			logger.info("Proposta removida com sucesso.");	
+			System.out.println("Proposta removida com sucesso.");	
 			return true;
 		}	
 		return false;
