@@ -1,14 +1,11 @@
 package br.tdd.crud;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.apache.log4j.Logger;
 
 import br.tdd.entities.Pessoa;
 
 public class Proposta extends Pessoa {
-	final static Logger logger = Logger.getLogger(Proposta.class);
+	// final static Logger logger = Logger.getLogger(Proposta.class);
 
 	public Proposta(String nome, String sexo, String cpf, long cnh, String dataNascimento, long rg, String orgaoEmissor,
 			String dataEmissao, String telefone, String celular, String email, String enedereco, int numeroCasa,
@@ -51,7 +48,7 @@ public class Proposta extends Pessoa {
 		if (getStatus() == 20) {
 			this.setRg(1234567890);
 			this.setCep("93265-000");
-			this.setEnedereco("Avenida Teste");
+			this.setEndereco("Avenida Teste");
 			this.setNumeroCasa(1234);
 			this.setEstado("RS");
 			setStatus(30);
