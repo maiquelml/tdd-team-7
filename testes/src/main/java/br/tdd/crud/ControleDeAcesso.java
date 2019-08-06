@@ -2,14 +2,13 @@ package br.tdd.crud;
 
 import java.util.ArrayList;
 
-import org.apache.log4j.Logger;
 /**
  * 
  * @author luis
  * 
  */
 public class ControleDeAcesso {
-	final static Logger logger = Logger.getLogger(ControleDeAcesso.class);
+	// final static Logger logger = Logger.getLogger(ControleDeAcesso.class);
 	/**
 	 * O método verificaListaContemAdministrador() valida se a matrícula recebida
 	 * por parâmetro está entre as permitidas para acessar o sistema

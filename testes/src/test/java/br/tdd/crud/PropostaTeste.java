@@ -4,9 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import java.util.Scanner;
-
-import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +12,7 @@ import br.tdd.filter.Filtro;
 
 
 public class PropostaTeste {
-	final static Logger logger = Logger.getLogger(PropostaTeste.class);
+	//	final static Logger logger = Logger.getLogger(PropostaTeste.class);
 	Proposta p;
 	private ControleDeAcesso controleDeAcesso;
 
@@ -59,13 +56,6 @@ public class PropostaTeste {
 		p.IncluirProposta();
 		assertEquals("Favor informar o CPF", p.getMensagem());
 		assertTrue(p.getStatus() == 11);
-	}
-	
-	@Test
-	public void deveAlterarPropostacomSucessoeAlterarStatuspara30() throws Exception {
-		p.setStatus(20);
-		p.AlterarProposta();
-		assertTrue(p.getStatus() == 30);
 	}
 
 	@Test
